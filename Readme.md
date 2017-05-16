@@ -73,4 +73,25 @@ There are two pieces of content we can add to a Bootstrap navigation bar: a head
 </nav>
 In the example above, the navbar wraps the container, which wraps the navbar-header and nav navbar-nav. The organization of the elements and classes provides the position, size, color-scheme, and format for all of the navigation bar's content. The navigation links inside of the nav navbar-nav div must always be anchor tags. These anchor tags are usually placed inside of an unordered list.
 
+## NAVBAR POSITIONING
+Bootstrap also makes it easy to position the navigation bar. Like any other HTML element, the default position of the navbar is where it is created in the flow of the HTML document (static positioning). Bootstrap however, has four navbar classes that are used to position the navigation bar:
+
+navbar-fixed-top positions and fixes the navigation bar to the top of the viewport. The navigation bar remains visible, even when scrolling down the page.
+navbar-fixed-bottom positions and fixes the navigation bar to the bottom of the viewport.
+navbar-left positions an element in the navigation bar to the left side of the navbar.
+navbar-right positions an element in the navigation bar to the right side of the navbar.
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+In the example above, the navbar nav is styled with the navbar-fixed-top class. This class positions and fixes the contents of the navigation bar to the top of the viewport. It also sets the navigation bar to fill the width of the browser window.
+
 ## 
