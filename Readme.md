@@ -94,4 +94,63 @@ navbar-right positions an element in the navigation bar to the right side of the
 </nav>
 In the example above, the navbar nav is styled with the navbar-fixed-top class. This class positions and fixes the contents of the navigation bar to the top of the viewport. It also sets the navigation bar to fill the width of the browser window.
 
+## Grid system I
+When creating a responsive website with Bootstrap, supporting content is often positioned with Bootstrap's built-in grid system. The grid system is useful for spacing content left to right across the viewport.
+
+All content in a Bootstrap grid should be wrapped in a container or container-fluid div. Although columns can be added to containers without these classes, they provide the styling necessary to support the grid system.
+
+The direct children of a grid container div should only be class row divs. Each of these Bootstrap row divs has 12 columns. The content of a row, usually more divs, can fill between one (col-md-1) and twelve (col-md-12) columns.
+
+<div class="container">
+  <!-- Start of the first row -->
+  <div class="row">
+    <div class="col-md-6">
+      <p> Row 1, Cols 1-6 </p>
+    </div>
+    <div class="col-md-6">
+      <p> Row 1, Cols 7-12 </p>
+    </div>
+  </div>
+  <!-- Start of the second row -->
+  <div class="row">
+    <div class="col-md-4">
+      <p> Row 2, Cols 1-4 </p>
+    </div>
+    <div class="col-md-4">
+      <p> Row 2, Cols 5-8 </p>
+    </div>
+    <div class="col-md-4">
+      <p> Row 2, Cols 9-12 </p>
+    </div>
+  </div>
+</div>
+In the example above, the container div has two rows. The first div in each row will start on the left side of the viewport. In the first row, each of the two column divs will take up half of the row. In the second row, each of the three column divs will take up one-third of the row. The grid will look something like Figure 1 in this image.
+
+What would happen if we changed the code above so each of the three divs in the second row were five columns wide? The three divs would fill more than twelve columns.
+
+<div class="container">
+  <!-- Start of the first row -->
+  <div class="row">
+    <div class="col-md-6">
+      <p> Row 1, Cols 1-6 </p>
+    </div>
+    <div class="col-md-6">
+      <p> Row 1, Cols 7-12 </p>
+    </div>
+  </div>
+  <!-- Start of the second row -->
+  <div class="row">
+    <div class="col-md-5">
+      <p> Row 2, Cols 1-5 </p>
+    </div>
+    <div class="col-md-5">
+      <p> Row 2, Cols 6-10 </p>
+    </div>
+    <div class="col-md-5">
+      <p> Row 2, Cols 1-5 </p>
+    </div>
+  </div>
+</div>
+In the example above, the second row contains three divs, each five columns wide. The first two divs will fill five columns each. Because the third div would fill columns 11-15, it wraps and is displayed under the first two divs. The third div is still part of row two. The height of row two will increase to fit the wrapped div. If a third row were added to the container, the content would be displayed beneath this wrapped element. The grid will look something like Figure 2 in this image.
+
 ## 
