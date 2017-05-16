@@ -208,3 +208,19 @@ In the example above, the browser will load the Bootstrap CSS document before st
 In the example above, the background-color property of class btn-primary is overwritten in the style.css document. The normal color value for btn-primary is blue. However, any anchor tag with btn-primary in this HTML document will appear green, because the property was overwritten.
 
 ## Review
+This lesson was an introduction to the Bootstrap CSS library. While there is a lot more depth to Bootstrap, you are ready to apply the concepts above to your own projects.
+
+Let's review what you've learned:
+
+The HTML document must be linked to a local or CDN hosted Bootstrap library.
+The Bootstrap container and container-fluid classes are required for every section of a Bootstrap site.
+The Bootstrap navbar class with navbar-default or navbar-inverse styles the appearance of the navigation bar.
+The navigation bar can be fixed to the top or bottom of a webpage with the navbar-fixed-top or navbar-fixed-bottom class.
+Elements in the navigation bar can be shifted to the left or right with the navbar-left and navbar-right classes.
+The jumbotron class makes the content within its container appear more prominently.
+The Bootstrap grid system requires a div of class row for each row in the grid.
+The Bootstrap grid system requires content elements that take up anywhere from one to twelve columns.
+The Bootstrap grid system can be used as a responsive layout framework by using a few of the following prefixes for each content element: xs, sm, md, or lg.
+Bootstrap provides built-in button and button-sizing classes.
+Built-in Bootstrap styles can be overwritten by setting property values with the same selectors in a local CSS document.
+Take a look at the Bootstrap CSS documentation for additional features of the Bootstrap library.
