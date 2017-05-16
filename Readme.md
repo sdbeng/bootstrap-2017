@@ -153,4 +153,44 @@ What would happen if we changed the code above so each of the three divs in the 
 </div>
 In the example above, the second row contains three divs, each five columns wide. The first two divs will fill five columns each. Because the third div would fill columns 11-15, it wraps and is displayed under the first two divs. The third div is still part of row two. The height of row two will increase to fit the wrapped div. If a third row were added to the container, the content would be displayed beneath this wrapped element. The grid will look something like Figure 2 in this image.
 
-## 
+## Grid system II
+Bootstrap has a set of classes designed specifically for creating responsive websites. This feature of the Bootstrap library is one of its most popular.
+
+In the last exercise, we used the col-xs-x class to specify the width of a div, where x is a number between one and twelve. The xs in this class stands for extra small, and instructs the browser to use this class if the user is viewing the site on a viewport that is narrower than 768 pixels. In addition to md, there are three other class categories for common device width ranges:
+
+col-xs-x - used when the width of the viewport is less than 768 pixels. This setting is for mobile phone display.
+col-sm-x - used when the width of the viewport is between 768 pixels and 991 pixels. This setting is for tablet display.
+col-md-x - used when the width of the viewport is between 992 pixels and 1199 pixels. This setting is for laptop display.
+col-lg-x - used when the width of the viewport is greater than 1199 pixels. This setting is for larger screen displays.
+If a Bootstrap column div has two of the above classes, Bootstrap will query the width of the viewport and display the content based on the number of columns assigned for the given browser width range.
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">Row 1, Column 1</div>
+    <div class="col-xs-12 col-md-6">Row 1, Column 2</div>
+  </div>
+</div>
+In the example above, if the user were to view this HTML on a mobile device, "Row 1, Column 1" would be displayed above "Row 1, Column 2". If they were viewing this on a laptop, "Row 1, Column 1" and "Row 1, Column 2" would be displayed on the same line ( Figure ). The col-xs-12 class sets these divs to fill the width of the Bootstrap container at small screen widths. The col-md-6 class sets each div to fill half of its container when the width is above 992 pixels.
+
+If a div's width is not defined for a specific range, the browser uses the nearest defined lower range.
+
+If a user were to view the example above on a 900 pixel wide device (the sm size), the browser will display the content using the widths from the xs class. The content would be displayed on separate lines. If the window were larger than 992 pixels, however, the text would be displayed on the same line.
+
+## Buttons
+Bootstrap comes with a set of classes that are designed to make elements appear as buttons. These classes consist of btn- followed by a word that defines the class' color scheme.
+
+The available button classes include: btn-default, btn-primary, btn-secondary, btn-success, btn-info, btn-warning, btn-danger, and btn-link.
+
+The classes above create solid-colored buttons. Bootstrap also provides btn-outline-x, where x can be any of the button color scheme options above. The difference is that the background color of btn-outline-x buttons is white, while the outline and text matches the color scheme.
+
+These classes are most often used to set the style for anchor tags.
+
+<a class="btn btn-primary" href="www.codecademy.com">Home</a>
+In the example above, an anchor tag is set to classes btn and btn-primary. The btn class is needed to add basic button styling. The btn-primary class sets the color scheme. This anchor tag will appear as a button with white text, a blue background, and a blue border.
+
+Additional classes can be used to set the size of buttons. Buttons can be made extra small with btn-xs, small with btn-sm, or large with btn-lg.
+
+<a class="btn btn-primary btn-sm" href="www.codecademy.com"> Home</a>
+In the example above, the btn-sm class decreases the size of the button and text.
+
+##
