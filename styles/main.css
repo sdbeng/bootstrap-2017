@@ -16,16 +16,16 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+  margin-top: 50px;
 }
 
 .navbar {
-
+	margin-bottom: 0px;
 }
 
 #showcase {
   margin-top: 50px;
 }
-
 
 /* About Section - Grid System */
 

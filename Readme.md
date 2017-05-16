@@ -193,4 +193,18 @@ Additional classes can be used to set the size of buttons. Buttons can be made e
 <a class="btn btn-primary btn-sm" href="www.codecademy.com"> Home</a>
 In the example above, the btn-sm class decreases the size of the button and text.
 
-##
+## Override styles
+The Bootstrap library may feel limiting, with classes that have predefined fonts, color schemes, and positioning. Fortunately, any property in a Bootstrap class can be overwritten to create a custom appearance. This is done by loading a restyling CSS document after loading the Bootstrap library.
+
+<!-- In the Head of the HTML Document -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+In the example above, the browser will load the Bootstrap CSS document before style.css. All Bootstrap class properties can be overwritten by creating a rule with the Bootstrap selector in style.css — use Chrome DevTools to find out the exact selector name.
+
+/* In style.css
+.btn-primary {
+  background-color: green;
+}
+In the example above, the background-color property of class btn-primary is overwritten in the style.css document. The normal color value for btn-primary is blue. However, any anchor tag with btn-primary in this HTML document will appear green, because the property was overwritten.
+
+## Review
